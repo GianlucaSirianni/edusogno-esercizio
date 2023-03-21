@@ -14,6 +14,7 @@ if($_SERVER["REQUEST_METHOD"] === "POST"){
                 session_start();
                 $_SESSION['is_logged'] = true;
                 $_SESSION['nome'] = $row['nome'];
+                $_SESSION['cognome'] = $row['cognome'];
                 $_SESSION['email'] = $row['email'];
 
                 header("location: eventi.php");

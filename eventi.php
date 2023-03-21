@@ -1,5 +1,8 @@
 <?php
 
+require_once('config.php');
+
+
 session_start();
 if(!isset($_SESSION['is_logged']) || $_SESSION['is_logged'] !== true){
     header("location: login.html");
@@ -19,7 +22,12 @@ if(!isset($_SESSION['is_logged']) || $_SESSION['is_logged'] !== true){
 <body>
     <h1>Area Privata</h1>
     <?php
-        echo "Ciao " . $_SESSION['nome'];
+        echo "Benvenuto " . $_SESSION['nome'] . $_SESSION['cognome'];
+        // if(isset($_SESSION['cognome'])){
+        //     echo "Benvenuto " . $_SESSION['nome'] . " " . $_SESSION['cognome'];
+        // } else {
+        //     echo "Errore: variabile di sessione 'cognome' non impostata.";
+        // }
 
     ?>
 
@@ -27,6 +35,30 @@ if(!isset($_SESSION['is_logged']) || $_SESSION['is_logged'] !== true){
 
     <?php
 
+
+        // Recupero eventi dell'utente
+        $email = $_SESSION['email']; // sostituisci con la variabile contenente l'email dell'utente
+        $sql = "SELECT nome_evento, data_evento FROM eventi WHERE FIND_IN_SET('$email', attendees) > 0;";
+        $result = $conn->query($sql);
+
+        // Mostra risultati in HTML
+        if ($result->num_rows > 0) {
+            // Inizializza tabella HTML
+            echo "<table><tr><th>Nome evento</th><th>Data evento</th></tr>";
+
+            // Stampa righe della tabella
+            while($row = $result->fetch_assoc()) {
+                echo "<tr><td>" . $row["nome_evento"] . "</td><td>" . $row["data_evento"] . "</td></tr>";
+            }
+
+            // Chiudi tabella HTML
+            echo "</table>";
+        } else {
+            echo "Nessun evento trovato";
+        }
+
+        // Chiudi connessione al database
+        $conn->close();
 
     ?>
 </body>
