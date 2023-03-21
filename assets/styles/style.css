@@ -4,8 +4,18 @@ padding: 0;
 box-sizing: border-box;
 }
 
+body{
+    width: 100vw;
+    height: 100vh;
+}
+
 .input-field{
     display: flex;
     flex-direction: column;
 }
 
+.register-form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
