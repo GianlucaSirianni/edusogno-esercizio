@@ -53,8 +53,58 @@ if (isset($_POST["email"])) {
 }
 
 ?>
-<form method="POST">
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edusogno</title>
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css'integrity='sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==' crossorigin='anonymous' referrerpolicy='no-referrer'>
+    <link rel="stylesheet" href="./assets/styles/style.css">
+</head>
+
+<body>
+
+    <header class="nav">
+        <div class="logo">
+            <img src="./assets/img/logo-edusogno.PNG" alt="">
+        </div>
+    </header>
+
+    <main>
+        <div class="create">
+            <h1>Vuoi resettare la tua password?</h1>
+        </div>
+        <div class="register-form">
+            <div class="form-container">  
+                <form method="POST">
+                    <div class="input-field">
+                        <label for="email">Inserisci l'email:</label>
+                        <input type="email" name="email" id="email" placeholder="name@example.com" required>
+                    </div>
+                    <div class="submit-btn">
+                        <input id="btn" type="submit" value="Inviami il link">
+                    </div>
+                    <div class="text-center">
+                        <p class="small"><a href="login.html">Torna al <strong>Login</strong> </a></p>
+                    </div>
+                </form>
+            </div> 
+        </div>
+    </main>
+
+
+    <script type="text/javascript" src="./assets/js/script.js"></script>
+</body>
+
+</html>
+
+<!-- <form method="POST">
     <input type="text" name="email" placeholder="email" autocomplete="off">
     <br>
     <input type="submit" name="submit" value="Reset email">
-</form>
+</form> -->

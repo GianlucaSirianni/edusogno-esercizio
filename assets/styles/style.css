@@ -5,13 +5,11 @@ margin: 0;
 padding: 0;
 box-sizing: border-box;
 font-family: 'Roboto Mono', monospace;
-
 }
 
 /* !REGISTER */
 body{
     height: 100vh;
-    /* background-color: #eeeeee; */
     background-image: url(../img/backgroundgeometrico.jpg);
 }
 
@@ -24,19 +22,15 @@ body{
     display: flex;
     align-items: center;
     border-radius: 0px 0px 10px 10px;
-
     background-color: white;
 }
 
 .logo{
     margin-left: 1rem;    
     padding: 1rem;    
-
 }
 
 /* ?MAIN */
-
-
 
 .input-field{
     display: flex;
@@ -83,8 +77,6 @@ label{
 }
 
 .submit-btn{
-    /* display: flex;
-    justify-content: center; */
     padding-top: 2rem;
     padding-bottom: 1rem;
     width: 100%;
@@ -125,4 +117,16 @@ label{
     cursor: pointer;
 }
 
+/* !LOGIN */
 
+.login-form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-form form{
+
+    height: 100%;
+    line-height: 2rem;
+}

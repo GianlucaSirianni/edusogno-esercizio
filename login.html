@@ -6,30 +6,55 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Edusogno</title>
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css'
+        integrity='sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=='
+        crossorigin='anonymous' referrerpolicy='no-referrer'>
     <link rel="stylesheet" href="./assets/styles/style.css">
+
 </head>
 
 <body>
 
-    <form action="login.php" method="POST">
-        <div class="input-field">
-            <label for="email">E-mail:</label>
-            <input type="email" name="email" id="email" style="width: 300px;" placeholder="Inserisci la tua E-mail" required>
+    <header class="nav">
+        <div class="logo">
+            <img src="./assets/img/logo-edusogno.PNG" alt="">
         </div>
-        <div class="input-field">
-            <label for="password">Password:</label>
-            <input type="password" name="password" id="password" style="width: 300px;" placeholder="Inserisci la tua password" required>
-        </div>
-        <div>
-            <input type="submit" value="Log-in">
-        </div>
-        <p>Non hai ancora un account? <a href="index.php">Registrati</a></p>
-        <a href="./requestReset.php">Hai dimenticato la Password?</a>
-        
-        
+    </header>
 
-    </form>
+    <main>
+        <div class="create">
+            <h1>Hai già un'account?</h1>
+        </div>
+        <div class="login-form">
+            <div class="form-container">
 
+                <form action="login.php" method="POST">
+                    <div class="input-field">
+                        <label for="email">Inserisci l'email</label>
+                        <input type="email" name="email" id="email" placeholder="name@example.com" required>
+                    </div>
+                    <div class="input-field">
+                        <label for="password">Inserisci la password</label>
+                        <div class="relative">
+                            <input type="password" name="password" id="password" placeholder="Scrivila qui" required>
+                            <i class="fa-solid fa-eye fa-eye-slash" id="togglePassword"></i>
+                        </div>
+                    </div>
+                    <div class="submit-btn">
+                        <input id="btn" type="submit" value="Log-in">
+                    </div>
+                    <div class="text-center">
+                        <p class="small">Non hai ancora un account? <a href="index.php">Registrati</a></p>
+                        <a href="./requestReset.php" class="small">Hai dimenticato la Password?</a>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+
+    </main>
+
+    <script type="text/javascript" src="./assets/js/script.js"></script>
 </body>
 
 </html>
