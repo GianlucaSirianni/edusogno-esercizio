@@ -41,7 +41,7 @@
                         <label for="password">Inserisci la password</label>
                         <div class="relative">
                             <input type="password" name="password" id="password"  placeholder="Scrivila qui" required>
-                            <i class="fa-solid fa-eye" id="togglePassword"></i>
+                            <i class="fa-solid fa-eye fa-eye-slash" id="togglePassword"></i>
                         </div>
 
                     </div>
