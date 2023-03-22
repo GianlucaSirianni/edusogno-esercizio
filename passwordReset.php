@@ -86,11 +86,3 @@ if(isset($_POST["password"])){
 </body>
 
 </html>
-
-
-
-<!-- <form method="POST">
-    <input type="password" name="password" placeholder="New Password">
-    <br>
-    <input type="submit" name="submit" value="UpdatePassword">
-</form> -->

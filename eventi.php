@@ -38,22 +38,21 @@ if(!isset($_SESSION['is_logged']) || $_SESSION['is_logged'] !== true){
         </div>
     </header>
     
-    <!-- <a href="logout.php">Logout</a> -->
 
     <?php
     // Recupero eventi dell'utente
-    $email = $_SESSION['email']; // sostituisci con la variabile contenente l'email dell'utente
+    $email = $_SESSION['email']; 
     $sql = "SELECT nome_evento, data_evento FROM eventi WHERE FIND_IN_SET('$email', attendees) > 0;";
     $result = $conn->query($sql);
 
-    // Mostra risultati in HTML
+
     if ($result->num_rows > 0) {
     ?>
 
     <div class="row">
 
         <?php
-        // Stampa righe della tabella
+
         while($row = $result->fetch_assoc()) {
         ?>
             <div class="card">

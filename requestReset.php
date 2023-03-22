@@ -1,6 +1,4 @@
 <?php
-//Import PHPMailer classes into the global namespace
-//These must be at the top of your script, not inside a function
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
@@ -30,7 +28,7 @@ if (isset($_POST["email"])) {
     if(!$query){
         exit("Error");
     }
-    //Create an instance; passing `true` enables exceptions
+
     $mail = new PHPMailer(true);
 
     try {
@@ -115,9 +113,3 @@ if (isset($_POST["email"])) {
 </body>
 
 </html>
-
-<!-- <form method="POST">
-    <input type="text" name="email" placeholder="email" autocomplete="off">
-    <br>
-    <input type="submit" name="submit" value="Reset email">
-</form> -->
