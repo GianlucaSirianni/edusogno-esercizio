@@ -20,12 +20,15 @@ if($_SERVER["REQUEST_METHOD"] === "POST"){
                 header("location: eventi.php");
             } else {
                 echo "la password non e' corretta";
+                echo '<p><a href="login.html">Torna al <strong>Login</strong> </a></p>';
             }
         } else {
             echo "non ci sono account con quello username";
+            echo '<p><a href="login.html">Torna al <strong>Login</strong> </a></p>';
         }
     } else {
         echo "errore in fase di login";
+        echo '<p>Riprova<a href="login.html">il <strong>Login</strong> </a></p>';
     }
 
     $conn->close();

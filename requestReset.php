@@ -14,9 +14,14 @@ if (isset($_POST["email"])) {
     $emailTo = $_POST["email"];
 
     // check if email exists in database
-    $check_query = mysqli_query($conn, "SELECT * FROM your_table_name WHERE email='$emailTo'");
+    $check_query = mysqli_query($conn, "SELECT * FROM utenti WHERE email='$emailTo'");
     if(mysqli_num_rows($check_query) == 0){
-        exit("Email non valida");
+        
+        echo '<script type="text/javascript">';
+        echo ' alert("Email non valida, torna indietro e riprova")'; 
+        echo '</script>';
+        echo '<p><a href="login.html">Torna al <strong>Login</strong> </a></p>';
+        exit('');
     }
 
     $code = uniqid(true);

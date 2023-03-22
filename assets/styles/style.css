@@ -63,7 +63,7 @@ label{
 .register-form form{
 
     height: 100%;
-    line-height: 2rem;
+    /* line-height: 2rem; */
 }
 
 .input-field input{

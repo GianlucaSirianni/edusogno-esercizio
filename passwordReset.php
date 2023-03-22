@@ -23,7 +23,8 @@ if(isset($_POST["password"])){
 
     if($query){
         $query = mysqli_query($conn, "DELETE FROM reset_password WHERE token='$code'");
-        exit("Password update");
+        echo '<p>La tua password è stata aggiornata, <a href="login.html">Torna al <strong>Login</strong> </a></p>';
+        exit();
     }else{
         exit("Something went wrong");
     }
