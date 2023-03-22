@@ -130,3 +130,35 @@ label{
     height: 100%;
     line-height: 2rem;
 }
+
+/* !EVENTI */
+
+.flex{
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav-name{
+    padding-right: 2rem;
+}
+
+.row{
+    padding-top: 4rem;
+    display: flex;
+    width: 100vw;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.card{
+    width: 30%;
+    background-color: white;
+    padding: 2rem;
+    border: 1px solid rgb(19, 64, 119);
+    border-radius: 15px;
+}
+
+.grey{
+    color: gray;
+
+}

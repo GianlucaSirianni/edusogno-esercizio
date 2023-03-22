@@ -13,6 +13,12 @@ if (isset($_POST["email"])) {
 
     $emailTo = $_POST["email"];
 
+    // check if email exists in database
+    $check_query = mysqli_query($conn, "SELECT * FROM your_table_name WHERE email='$emailTo'");
+    if(mysqli_num_rows($check_query) == 0){
+        exit("Email non valida");
+    }
+
     $code = uniqid(true);
 
     $query = mysqli_query($conn, "INSERT INTO reset_password(token, email) VALUES ('$code', '$emailTo')");
