@@ -50,7 +50,9 @@ if(isset($_POST["password"])){
 
     <header class="nav">
         <div class="logo">
-            <img src="./assets/img/logo-edusogno.PNG" alt="">
+            <a href="/edusogno-esercizio">
+                <img src="./assets/img/logo-edusogno.PNG" alt="">
+            </a>
         </div>
     </header>
 
